@@ -1,0 +1,41 @@
+:root {
+    --main-color: 255, 255, 255;
+    --secundary-color: 241, 245, 245;
+
+    --modal-background-color: 255, 255, 255;
+    --background-alert: #ffeebc;
+    --background-icon-color: #ebeffa;
+    --background-modal: #0009;
+
+    --light-color: rgb(120, 117, 141);
+    --primary-title-color: #333;
+    --secundary-title-color: #444;
+    --tertiary-title-color: #555;
+
+    --text-color: rgb(93, 93, 104);
+    --text-smooth: #9aa2b1;
+    --dark-color: #334155;
+    --dark-text-color: #334155;
+    --title-color: #eee;
+    --icon-color: #64748b;
+    --border: 1px solid rgba(var(--border-color));
+    --border-color: 222, 226, 232;
+
+    --box-shadow: 0 1px 3px rgba(34, 34, 34, 0.1);
+    --box-shadow-popup: 0 3px 5px rgba(0, 0, 0, 0.2);
+    --input-shadow: 0 1px 1px rgba(24, 42, 80, 0.068);
+
+    --accent-color: var(--light-purple-color);
+    --purple-color: 59, 74, 158;
+    --blue-color: 63, 111, 202;
+    --blue-marine-color: 78, 223, 228;
+    --yellow-color: 244, 170, 32;
+    --green-color: 90, 172, 90;
+    --red-color: 230, 85, 85;
+    --orange-color: 228, 106, 68;
+    --pink-color: 244, 63, 94;
+
+    --light-pink-color: 244, 83, 114;
+    --light-blue-color: 80, 170, 201;
+    --light-purple-color: 113, 114, 187;
+}

@@ -1,0 +1,50 @@
+/* ---------- APP TOOLS ---------- */
+.app-tools {
+    display: flex;
+    align-items: center;
+    background: rgba(var(--main-color));
+    box-shadow: var(--input-shadow);
+    border-bottom: 1px solid rgba(var(--border-color));
+    color: var(--text-smooth);
+    font-size: .875rem;
+    padding: 10px 0;
+    padding-right: 7.5px;
+}
+
+.app-tools-info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.app-tools-actions {
+    display: flex;
+    align-items: center;
+}
+
+.tools-actions-item.separator {
+    height: 20px;
+    width: 2px;
+    background: rgba(var(--border-color), 1);
+    cursor: default;
+}
+
+.tools-actions-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.tools-actions-item label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .app-tools {
+        justify-content: flex-end;
+    }
+
+    .app-tools-info {
+        display: none;
+    }
+}

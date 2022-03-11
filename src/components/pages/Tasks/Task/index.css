@@ -1,0 +1,103 @@
+.tasks-item {
+    margin-top: 20px;
+}
+
+/* TASK IMG */
+.task-img img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+/* TASK PRIORITY */
+.task-priority {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.task-priority-item {
+    width: 30%;
+    height: 5px;
+    border-radius: 3rem;
+}
+
+/* TASK HEADER */
+.task-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: var(--tertiary-title-color);
+    font-size: .875rem;
+}
+
+.task-header-icon {
+    margin-right: 10px;
+    color: var(--icon-color);
+}
+
+/* TASK LABELS */
+.task-labels {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 10px;
+}
+.task-label {
+    border-radius: 3rem;
+    padding: 3px 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: .7rem;
+    width: max-content;
+}
+
+/* TASK INTEGRAL */
+.task-integral {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: .8rem;
+}
+
+.task-integral-info,
+.task-integral-tools {
+    display: flex;
+    align-items: center;
+}
+.task-integral-info img {
+    margin-right: 5px;
+}
+
+.task-tools-item {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.task-tools-count {
+    margin-right: 5px;
+}
+
+/* SUBTASK LIST */
+.subtasks-list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.subtask-item {
+    padding: 5px 0;
+    border-top: 2px solid rgba(var(--border-color), .5);
+    color: var(--text-color);
+}
+.subtask-icon {
+    color: var(--icon-color);
+}
+
+.subtask-name {
+    margin-left: 10px;
+    font-size: .875rem;
+}
+
+.new-subtask input {
+    border: none;
+    color: var(--text-smooth);
+}

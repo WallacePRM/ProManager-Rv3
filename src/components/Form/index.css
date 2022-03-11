@@ -1,0 +1,86 @@
+
+/* ---------- FORM APP ---------- */
+.form-app {
+    padding: 40px;
+    border: none;
+}
+
+.form-app-header,
+.form-app-content,
+.form-app-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.form-app .btn-link {
+    color: rgba(var(--light-purple-color));
+    font-size: .875rem;
+    width: 100%;
+}
+
+/* ---------- FORM HEADER ---------- */
+.form-app-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.form-app-header h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-title-color);
+}
+
+/* ---------- FORM CONTENT ---------- */
+
+.form-app .form-field {
+    margin-bottom: 20px;
+}
+
+.form-app .form-field label {
+    font-size: .875rem;
+    color: var(--secundary-title-color);
+}
+.form-app .form-field input {
+    font-size: .875rem;
+    border: var(--border);
+    border-radius: .3rem;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.form-error {
+    color: rgba(var(--red-color));
+    font-size: .875rem;
+    padding: 5px;
+}
+
+/* ---------- FORM FOOTER ---------- */
+.form-app-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-app-footer .btn-primary {
+    width: 100%;
+    border-radius: .3rem;
+    font-weight: 500;
+    padding: 15px 20px;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.form-app-footer .btn-secundary {
+    background: transparent;
+    width: max-content;
+    border: none;
+    margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+    .form-app {
+        min-width: 100%;
+        box-shadow: none;
+        background: transparent;
+    }
+}
