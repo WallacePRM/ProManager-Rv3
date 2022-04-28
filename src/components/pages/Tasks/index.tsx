@@ -18,45 +18,18 @@ const Tasks = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
+    const [ modalVisible , setModalVisible] = useState(false);
+
     const params = useParams();
     const projectId = parseInt(params.id || '');
     const projects = useSelector(selectProjects);
     const project = projects.find(p => p.id === projectId);
-    if (!project) {
-        return <LayoutApp>
-            <ErrorMessage message="Projeto inexistente"/>
-        </LayoutApp>
-    }
-
-    const newTasks = project.tasks.filter(t => t.history.length === 0 || t.history[t.history.length - 1].action === 'pause');
-    const inProgress =  project.tasks.filter(t => t.history[t.history.length - 1]?.action === 'play');
-    const completed =  project.tasks.filter(t => t.isDone);
-    const [ modalVisible , setModalVisible] = useState(false);
-
-    const handleBackClick = () => {
-        navigate('/projects');
-    };
-
-    const handleCloseModal = () => {
-
-        setModalVisible(false);
-    };
-
-    const handleShowModalTask = () => {
-
-        setModalVisible(true);
-    };
-
-    const handleTaskCreated = (task: TaskItem) => {
-
-        dispatch(createTask({task, project_id: projectId}));
-    };
 
     const getDrop = (isDone: boolean, action: string) => {
 
         return async (item: TaskItem, monitor: any) => {
 
-            const task = project.tasks.find(t => t.id === item.id);
+            const task = project?.tasks.find(t => t.id === item.id);
             if (task) {
 
                 const history =  {
@@ -126,7 +99,35 @@ const Tasks = () => {
         drop: getDrop(true, 'stop')
     }));
 
-    const setTaskStatus = () => {};
+
+    if (!project) {
+        return <LayoutApp>
+            <ErrorMessage message="Projeto inexistente"/>
+        </LayoutApp>
+    }
+
+    const newTasks = project.tasks.filter(t => t.history.length === 0 || t.history[t.history.length - 1].action === 'pause');
+    const inProgress =  project.tasks.filter(t => t.history[t.history.length - 1]?.action === 'play');
+    const completed =  project.tasks.filter(t => t.isDone);
+
+    const handleBackClick = () => {
+        navigate('/projects');
+    };
+
+    const handleCloseModal = () => {
+
+        setModalVisible(false);
+    };
+
+    const handleShowModalTask = () => {
+
+        setModalVisible(true);
+    };
+
+    const handleTaskCreated = (task: TaskItem) => {
+
+        dispatch(createTask({task, project_id: projectId}));
+    };
 
     return (
         <LayoutApp>

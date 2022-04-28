@@ -27,7 +27,7 @@ const LayoutApp = (props: LayoutAppProps) => {
     );
 };
 
-LayoutApp.Header = (props: HeaderProps) => {
+const Header = (props: HeaderProps) => {
 
     return (
         <header className="app-header">
@@ -61,7 +61,7 @@ type HeaderProps = {
     onBackClick?: () => void
 };
 
-LayoutApp.HeaderTabs = (props: HeaderTabsProps) => {
+const HeaderTabs = (props: HeaderTabsProps) => {
 
     const [ activeTabId, setActiveTabId ] = useState<any>(props.initialTab);
     const getHandleChangeTab = (tab: TabItem) => (e: React.MouseEvent) => {
@@ -94,7 +94,7 @@ export type TabItem = {
     count?: number
 };
 
-LayoutApp.Content = (props: {children: React.ReactElement}) => {
+const Content = (props: {children: React.ReactElement}) => {
     return (
         <div className="app-content">
             {props.children}
@@ -113,5 +113,9 @@ export enum Tabs {
     InProgress,
     Completed
 }
+
+LayoutApp.Header = Header;
+LayoutApp.HeaderTabs = HeaderTabs;
+LayoutApp.Content = Content;
 
 export default LayoutApp;
